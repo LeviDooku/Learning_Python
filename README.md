@@ -10,7 +10,7 @@ Me he propuesto aprender durante una hora al día varios lenguajes de programaci
 
 ## Directorio de ficheros
 
-Primero que nada, la documentación de Python se puede consultar aquí: ([Documentación](https://docs.python.org/3/tutorial/index.html)).  
+Primero que nada, la documentación de Python se puede consultar aquí: ([Documentación](https://www.python.org/)).  
 
 Cada nivel se compone de forma arbitraria de programas de creciente dificultad comentados en los que se aprende algo nuevo. También, cada uno de ellos incluirá un pequeño proyecto final.
 
