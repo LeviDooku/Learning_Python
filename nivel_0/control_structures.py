@@ -1,4 +1,4 @@
-#Script que busca un nombre en una lista de nombres introducidos por el usuario
+#Script que crea un conjunto de nombres y da la posibilidad al usuario de consultar la presencia de uno de ellos
 
 #Se usa un set en vez de list, para evitar nombres repetidos
 
@@ -7,7 +7,7 @@ indice = int(0)
 
 print("Introduzca los nombres (presione <enter> para terminar): \n")
 
-#Forma bastante mala de introducir datos, pero todavía no se tanto 
+#Forma bastante mala de introducir datos, pero todavía no sé lo suficiente 
 
 while True:
     nombre = str(input(f"Nombre número #{indice}: "))
