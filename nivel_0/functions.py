@@ -24,7 +24,7 @@ def devuelve_primo(_candidatos):
     return conjunto_primos
 
 
-_candidatos = list() #El caracter "_" indica que la variable no debe ser modificada
+_candidatos = list() #El caracter "_" indica que la variable no debe ser modificadaº
 indice = int(0)
 total = int(input("¿Cuántos números tendrá la lista?: "))
 
