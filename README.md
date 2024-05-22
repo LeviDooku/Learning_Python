@@ -24,6 +24,10 @@ Cada nivel se compone de forma arbitraria de programas de creciente dificultad c
         - [`calculadora_V0`](nivel_0/Calculadora_Simple/calculadora_V0.py): versión funcional de la calculadora en terminal. Usa varias funciones, estructuras de control de argumentos y una lista para almacenar los operandos.
         - [`calculadora_V1`](nivel_0/Calculadora_Simple/calculadora_V1.py): versión que implementa la primera versión con interfaz de la calculadora. Al ejecutar se abren dos ventanas, una contiene las instrucciones y la otra el programa en sí. Para la GUI se usa Tkinter, bastante fácil e intuitivo de usar a un nivel básico. Me ha costado aproximadamente unas dos horas en pillarle el truco totalmente a este framework. Considero que lo más complicado es recoger información a partir de eventos (botones en este caso). Este proceso está explicado en el propio archivo.  
         
-        Aspectos a mejorar para la siguiente versión:  
+        Aspectos a mejorar para la siguiente (y última) versión:  
         - Controlar las divisiones / 0.  
-        - Que se ingrese una cadena de operaciones, actualmente el proceso es lento
+        - Que se ingrese una cadena de operaciones, actualmente el proceso es lento.  
+
+        Se adjuntan unas imágenes de la GUI:  
+
+        
