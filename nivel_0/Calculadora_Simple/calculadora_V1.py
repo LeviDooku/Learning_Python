@@ -21,7 +21,8 @@ caja_de_texto.grid(row = 1, column = 0, columnspan = 3, sticky = "ew")
 
 #Generación y colocación de los botones de números
 
-botones = {}
+botones = {} #Diccionario, cada elemento lleva una etiqueta asociada (similar a map de C++)
+
 for i in range(10):
     botones[i] = tkinter.Button(window, text = str(i), width = 4, height = 4)
 
