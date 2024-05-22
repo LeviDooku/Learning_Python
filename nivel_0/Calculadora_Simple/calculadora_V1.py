@@ -10,35 +10,36 @@
 
 import tkinter 
 
-window = tkinter.Tk()
-window.geometry("500x500")
+window = tkinter.Tk() #Creación de la ventana
+window.geometry("300x450") #Medidas (a ojo)
 
-titulo = tkinter.Label(window, text = "Calculadora simple", bg = "blue")
+titulo = tkinter.Label(window, text = "Calculadora simple", bg = "blue") #Etiqueta del nombre del programa
 titulo.grid(row = 0, column = 0, columnspan = 3, sticky = "ew")
 
-caja_de_texto = tkinter.Label(window, text = "Aquí irá resultado")
+caja_de_texto = tkinter.Label(window, text = "Aquí irá resultado", padx = 35, pady = 25) #Etiqueta del nombre de donde debería ir el resultado
 caja_de_texto.grid(row = 1, column = 0, columnspan = 3, sticky = "ew")
 
 botones = {}
 for i in range(10):
-    botones[i] = tkinter.Button(window, text=str(i), width=5, height=5)
+    botones[i] = tkinter.Button(window, text = str(i), width = 4, height = 4)
 
-botones[1].grid(row=2, column=0)
-botones[2].grid(row=2, column=1)
-botones[3].grid(row=2, column=2)
-botones[4].grid(row=3, column=0)
-botones[5].grid(row=3, column=1)
-botones[6].grid(row=3, column=2)
-botones[7].grid(row=4, column=0)
-botones[8].grid(row=4, column=1)
-botones[9].grid(row=4, column=2)
-botones[0].grid(row=5, column=0, columnspan=3, sticky = "ew")
+botones[1].grid(row = 2, column = 0)
+botones[2].grid(row = 2, column = 1)
+botones[3].grid(row = 2, column = 2)
+botones[4].grid(row = 3, column = 0)
+botones[5].grid(row = 3, column = 1)
+botones[6].grid(row = 3, column = 2)
+botones[7].grid(row = 4, column = 0)
+botones[8].grid(row = 4, column = 1)
+botones[9].grid(row = 4, column = 2)
+botones[0].grid(row = 5, column = 0, columnspan = 3, sticky = "ew")
 
 autor = tkinter.Label(window, text =  "Pedro Velasco Santana, 2024", bg = "blue")
 autor.grid(row = 6, column = 0, columnspan = 3, sticky = "ew")
 
 window.mainloop()
 
+"""
 #Funciones para las distintas operaciones
 
 def suma(operandos):
@@ -116,3 +117,4 @@ while True:
 
 resultado = switch(cod_operacion, operandos)
 print(f"\n\n[+] Resultado de la operación: {resultado}")
+"""
