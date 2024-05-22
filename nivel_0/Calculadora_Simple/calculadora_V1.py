@@ -1,32 +1,45 @@
 #################################
 #Autor: Pedro Velasco Santana   #
 #                               #
-#Archivo: calculadora_V0.py     #
+#Archivo: calculadora_V1.py     #
 #################################
 
-#Versión en terminal de un proyecto más ambicioso
+#Versión de la calculadora con GUI (Versión 1)
 
-#NOTA: De antemano pido disculpas por los núemeros mágicos, espero que se entienda la utilidad de los mismos
+#Explicación del código en calculadora_V0.py, aquí solo se comentará los aspectos relacionados con la GUI
+
+import tkinter 
+
+window = tkinter.Tk()
+window.geometry("500x500")
+
+titulo = tkinter.Label(window, text = "Calculadora simple", bg = "blue")
+titulo.grid(row = 0, column = 0, columnspan = 3, sticky = "ew")
+
+caja_de_texto = tkinter.Label(window, text = "Aquí irá resultado")
+caja_de_texto.grid(row = 1, column = 0, columnspan = 3, sticky = "ew")
+
+botones = {}
+for i in range(10):
+    botones[i] = tkinter.Button(window, text=str(i), width=5, height=5)
+
+botones[1].grid(row=2, column=0)
+botones[2].grid(row=2, column=1)
+botones[3].grid(row=2, column=2)
+botones[4].grid(row=3, column=0)
+botones[5].grid(row=3, column=1)
+botones[6].grid(row=3, column=2)
+botones[7].grid(row=4, column=0)
+botones[8].grid(row=4, column=1)
+botones[9].grid(row=4, column=2)
+botones[0].grid(row=5, column=0, columnspan=3, sticky = "ew")
+
+autor = tkinter.Label(window, text =  "Pedro Velasco Santana, 2024", bg = "blue")
+autor.grid(row = 6, column = 0, columnspan = 3, sticky = "ew")
+
+window.mainloop()
 
 #Funciones para las distintas operaciones
-
-"""
-Nota sobre el funcionamiento:
-
-Las operaciones usan los operadores de asignación: 
-
-                +=, -=, *=, /= 
-
-La finalidad de su uso es concatenar operaciones, el problema
-está presenta en la resta y división, donde no existe un elemento 
-neutro al que inicializar la variable que contendrá el resultado.
-Por ende, se me ha ocurrido asignarle la primera operación a esta
-variable para posteriormente continuar con el resto de operaciones con 
-normalidad. 
-
-Para suma y producto se usan bucles for y para resta y división un bucle
-while que recorre la lista de operandos desde la tercera posición
-"""
 
 def suma(operandos):
     resultado = float(0)
@@ -38,7 +51,7 @@ def suma(operandos):
 
 def resta(operandos):
     resultado = operandos[0] - operandos[1]
-    indice = 2 #Se empieza a calcular desde la tercera posición
+    indice = 2 
     while indice < len(operandos):
         resultado -= operandos[indice]
         indice += 1
@@ -47,7 +60,7 @@ def resta(operandos):
     return resultado
 
 def producto(operandos):
-    resultado = float(1) #Elemento neutro del producto
+    resultado = float(1) 
     for numero in operandos:
         resultado *= numero
     
@@ -55,8 +68,8 @@ def producto(operandos):
     return resultado
 
 def divison(operandos):
-    resultado = operandos[0] / operandos[1] #Calcula la primera división
-    indice = 2 #Se empieza a calcular desde la tercera posición
+    resultado = operandos[0] / operandos[1] 
+    indice = 2 
     while indice < len(operandos):
         resultado /= operandos[indice]
         indice += 1
@@ -76,7 +89,7 @@ def switch(cod_operacion, operandos):
     elif cod_operacion == 4: 
         return divison(operandos)
 
-print("***************************************\n         CALCULADORA PYTHON V0\n***************************************\n")
+print("***************************************\n         CALCULADORA PYTHON V1\n***************************************\n")
 
 #Selección de operación
 
@@ -84,21 +97,19 @@ cod_operacion = int(input("\n\n[+] ¿Qué operación desea realizar? SUMA(1) RES
 while cod_operacion < 1 or cod_operacion > 4:
     cod_operacion = int(input("\n\n[+] Código de operación no válido SUMA(1) RESTA(2) PRODUCTO(3) DIVISIÓN(4): "))
 
-operandos = list() #Los operandos se guardarán en una lista, y se van introduciendo al final de la misma
+operandos = list()
 indice = int(0)
-
-#Se rellena la lista con los operandos
 
 while True: 
     numero = input(f"\n[+] Ingrese operando #{indice} (<Enter> para terminar): ")
 
     if not numero:
         break
-    elif indice > 0 and cod_operacion == 4 and float(numero) == 0: #Control de divisores = 0
+    elif indice > 0 and cod_operacion == 4 and float(numero) == 0: 
         print("[-] ERROR: el divisior no puede ser 0")
         break
 
-    operandos.append(float(numero)) #Los números se almacenan como float
+    operandos.append(float(numero))
     indice += 1
 
 #Salida 
