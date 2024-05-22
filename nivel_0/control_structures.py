@@ -1,3 +1,9 @@
+#####################################
+#Autor: Pedro Velasco Santana       #
+#                                   #
+#Archivo: control_structures.py     #
+#####################################
+
 #Script que crea un conjunto de nombres y da la posibilidad al usuario de consultar la presencia de uno de ellos
 
 #Se usa un set en vez de list, para evitar nombres repetidos

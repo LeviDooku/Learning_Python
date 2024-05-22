@@ -1,3 +1,9 @@
+#################################
+#Autor: Pedro Velasco Santana   #
+#                               #
+#Archivo: first_script.py       #
+#################################
+
 #Script que pide al usuario sus datos y los muestra por pantalla
 
 print("Introduzca su nombre: \n")

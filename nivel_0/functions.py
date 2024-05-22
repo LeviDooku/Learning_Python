@@ -1,3 +1,9 @@
+#################################
+#Autor: Pedro Velasco Santana   #
+#                               #
+#Archivo: functions.py          #
+#################################
+
 #Aprender a usar funciones en Python
 
 #Script que a partir de una lista devuelve otra con los números primos presentes
