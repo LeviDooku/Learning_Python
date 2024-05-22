@@ -22,4 +22,8 @@ Cada nivel se compone de forma arbitraria de programas de creciente dificultad c
     - [`functions.py`](nivel_0/functions.py): pequeño script para filtrar los números primos de una lista ingresada por el usuario. Para ello se usan dos funciones "es_primo", que determina si un número es primo y "devuelve_primo" que devuelve el conjunto filtrado. Se ha aprendido aparte a usar operadores ternarios, la función range() y la convención de usar "_" para variables que no deben ser modificadas.
     - [Proyecto: Calculadora simple](nivel_0/Calculadora_Simple): el proyecto final del nivel 0. Una calculadora que permita hacer operaciones de dos o más operandos y que use una GUI sencilla e intuitiva.  
         - [`calculadora_V0`](nivel_0/Calculadora_Simple/calculadora_V0.py): versión funcional de la calculadora en terminal. Usa varias funciones, estructuras de control de argumentos y una lista para almacenar los operandos.
-        - [`calculadora_V1`](nivel_0/Calculadora_Simple/calculadora_V1.py): versión que implementará la primera aproximación de la GUI
+        - [`calculadora_V1`](nivel_0/Calculadora_Simple/calculadora_V1.py): versión que implementa la primera versión con interfaz de la calculadora. Al ejecutar se abren dos ventanas, una contiene las instrucciones y la otra el programa en sí. Para la GUI se usa Tkinter, bastante fácil e intuitivo de usar a un nivel básico. Me ha costado aproximadamente unas dos horas en pillarle el truco totalmente a este framework. Considero que lo más complicado es recoger información a partir de eventos (botones en este caso). Este proceso está explicado en el propio archivo.  
+        
+        Aspectos a mejorar para la siguiente versión:  
+        - Controlar las divisiones / 0.  
+        - Que se ingrese una cadena de operaciones, actualmente el proceso es lento

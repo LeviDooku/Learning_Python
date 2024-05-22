@@ -4,13 +4,14 @@
 #Archivo: calculadora_V1.py     #
 #################################
 
-#Versión de la calculadora con GUI (Versión 1)
+#Versión de la calculadora con GUI (V1)
 
 #Sé que hay muchos comentarios pero hay que acordarse!!
 
 #Explicación del código en calculadora_V0.py, aquí solo se comentará los aspectos relacionados con la GUI
 
 from tkinter import *
+from tkinter.font import Font #Tipo de letra y tamaño
 
 #Funciones para las distintas operaciones
 
@@ -53,13 +54,13 @@ def divison(operandos):
 """
 Explicación de argumentos:
 
-1. Label(root, text = "Calculadora simple", bg = "blue")
+1. Etiqueta = Label(root, text = "Calculadora simple", bg = "blue")
 
 root: donde se mostrará 
 text: texto a mostrar
 bg: color del background
 
-2. grid(row = 0, column = 0, columnspan = 3, sticky = "ew")
+2. .grid(row = 0, column = 0, columnspan = 3, sticky = "ew")
 
 row: fila del grid donde se mostrará
 column: columna del grid donde se mostrará
@@ -67,7 +68,7 @@ columnspan: número de columnas que ocupará el objeto referenciado
 sticky: usa las iniciales de los puntos cardinales para indicar que llene el espacio disponible en esa dirección.
 "ew" ocupa de east a west aka eje x.
 
-3. Button(root, text = " ", width = 4, height = 4)
+3. Boton = Button(root, text = " ", width = 4, height = 4)
 
 root: donde se mostrará
 text: texto a mostrar
@@ -83,7 +84,7 @@ Funciones:
 
 Para llamar a una función después de pulsar un botón o cualquier tipo de evento se usa: 
 
-command=funcion_a_llamar
+command=funcion_a_llamar, como parámetro en el constructor del objeto
 
 Si la funcion tiene parámetros:
 
@@ -136,8 +137,10 @@ instrucciones = Label(instrucciones, text = "INSTRUCCIONES:\n\n- Presiona <Enter
 root = Tk() #Creación de la ventana
 root.title("Calculadora v1")
 
+fuente = Font(size=12)
+
 #No se puede poner el .grid en el mismo objeto, ya que al evaluarlo, la función "mostrar_info" lo detecta como nulo 
-caracter_pulsado = Label(root, text = " ", padx = 35, pady = 25, borderwidth = 2, relief = "solid") #Etiqueta del nombre de donde se van mostrando los caracteres pulsados
+caracter_pulsado = Label(root, text = " ", font=fuente, padx = 35, pady = 25, borderwidth = 2, relief = "solid") #Etiqueta del nombre de donde se van mostrando los caracteres pulsados
 caracter_pulsado.grid(row = 1, column = 0, columnspan = 4, sticky = "ew") 
 
 #Generación y colocación de los botones de números    
@@ -145,7 +148,7 @@ caracter_pulsado.grid(row = 1, column = 0, columnspan = 4, sticky = "ew")
 botones = {} #Diccionario, cada elemento lleva una etiqueta asociada (similar a map de C++)
 
 for i in range(10):
-    botones[i] = Button(root, text = str(i), command = lambda numero = i: mostrar_info(numero), width = 15, height = 5)
+    botones[i] = Button(root, text = str(i), font=fuente, command = lambda numero = i: mostrar_info(numero), width = 15, height = 5)
 
 botones[1].grid(row = 2, column = 0)
 botones[2].grid(row = 2, column = 1)
@@ -160,13 +163,13 @@ botones[0].grid(row = 5, column = 0, columnspan = 3, sticky = "ew")
 
 #Generación y colocación de los botones de operaciones
 
-boton_suma = Button(root, text = "+", command = lambda: mostrar_info("+"), width = 10, height = 5).grid(row = 2, column = 3)
-boton_resta = Button(root, text = "-", command = lambda: mostrar_info("-"), width = 10, height = 5).grid(row = 3, column = 3)
-boton_prod = Button(root, text = "x", command = lambda: mostrar_info("x"), width = 10, height = 5).grid(row = 4, column = 3)
-boton_div = Button(root, text = "/", command = lambda: mostrar_info("/"), width = 10   , height = 5).grid(row = 5, column = 3)
-boton_enter = Button(root, text = "<Enter>", command = lambda: mostrar_info("<Enter>"), width = 4, height = 4).grid(row = 6, column = 0, columnspan = 4, sticky = "ew")
-boton_result = Button(root, text = "RESULT", command = lambda: mostrar_info("RESULT"), width = 4, height = 4, bg = "red").grid(row = 7, column = 0, columnspan = 2, sticky = "ew")
-boton_reset = Button(root, text = "RESET", command = lambda: mostrar_info("RESET"), width = 4, height = 4, bg = "red").grid(row = 7, column = 2, columnspan = 2, sticky = "ew")
+boton_suma = Button(root, text = "+", font=fuente, command = lambda: mostrar_info("+"), width = 10, height = 5).grid(row = 2, column = 3)
+boton_resta = Button(root, text = "-", font=fuente, command = lambda: mostrar_info("-"), width = 10, height = 5).grid(row = 3, column = 3)
+boton_prod = Button(root, text = "x", font=fuente, command = lambda: mostrar_info("x"), width = 10, height = 5).grid(row = 4, column = 3)
+boton_div = Button(root, text = "/", font=fuente, command = lambda: mostrar_info("/"), width = 10   , height = 5).grid(row = 5, column = 3)
+boton_enter = Button(root, text = "<Enter>", font=fuente, command = lambda: mostrar_info("<Enter>"), width = 4, height = 4).grid(row = 6, column = 0, columnspan = 4, sticky = "ew")
+boton_result = Button(root, text = "RESULT", font=fuente, command = lambda: mostrar_info("RESULT"), width = 4, height = 4, bg = "red").grid(row = 7, column = 0, columnspan = 2, sticky = "ew")
+boton_reset = Button(root, text = "RESET", font=fuente, command = lambda: mostrar_info("RESET"), width = 4, height = 4, bg = "red").grid(row = 7, column = 2, columnspan = 2, sticky = "ew")
 
 autor = Label(root, text =  "Pedro Velasco Santana, 2024", bg = "blue").grid(row = 8, column = 0, columnspan = 4, sticky = "new") #Etiqueta autor
 
