@@ -19,6 +19,8 @@ titulo.grid(row = 0, column = 0, columnspan = 3, sticky = "ew")
 caja_de_texto = tkinter.Label(window, text = "Aquí irá resultado", padx = 35, pady = 25) #Etiqueta del nombre de donde debería ir el resultado
 caja_de_texto.grid(row = 1, column = 0, columnspan = 3, sticky = "ew")
 
+#Generación y colocación de los botones de números
+
 botones = {}
 for i in range(10):
     botones[i] = tkinter.Button(window, text = str(i), width = 4, height = 4)
@@ -34,7 +36,11 @@ botones[8].grid(row = 4, column = 1)
 botones[9].grid(row = 4, column = 2)
 botones[0].grid(row = 5, column = 0, columnspan = 3, sticky = "ew")
 
-autor = tkinter.Label(window, text =  "Pedro Velasco Santana, 2024", bg = "blue")
+#Generación y colocación de los números de operaciones
+
+#Aun por hacer
+
+autor = tkinter.Label(window, text =  "Pedro Velasco Santana, 2024", bg = "blue") #Etiqueta autor
 autor.grid(row = 6, column = 0, columnspan = 3, sticky = "ew")
 
 window.mainloop()
