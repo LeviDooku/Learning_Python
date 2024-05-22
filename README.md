@@ -30,3 +30,4 @@ Cada nivel se compone de forma arbitraria de programas de creciente dificultad c
 
             Se adjuntan unas imágenes de la GUI:  
 
+            ![GUI](readme_resources/GUI_calculadora_V1.png)
