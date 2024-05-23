@@ -8,6 +8,7 @@ Me he propuesto aprender durante una hora al día varios lenguajes de programaci
 
 - Lunes 20 de Mayo: primer día aprendiendo python, he hecho tres programas muy sencillos para aprender la sintaxis básica, manejo de variables, condicionales y bucles y la estructura de datos set.
 - Martes 21 de Mayo: he añadido un nuevo programa que usa funciones para filtrar los números primos de una lista ingresada por el usuario.
+- Miércoles 22 de Mayo: viciada padre, completadas las primeras dos versiones del proyecto del nivel 0. Estoy orgulloso por un lado, pero por el otro no debería invertir tantas horas teniendo otras cosas que hacer.
 
 ## Directorio de ficheros
 
