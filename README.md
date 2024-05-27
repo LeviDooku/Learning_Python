@@ -35,6 +35,6 @@ Cada nivel se compone de forma arbitraria de programas de creciente dificultad c
             ![GUI](readme_resources/GUI_calculadora_V1.png)
 
 - [nivel_1](nivel_1): manejo de excepciones, lamda y map, trabajar con archivos etc.  
-        - [`excepciones_0.py`](nivel_0/excepciones_0.py): sintaxis básica del bloque try - except
-        - [`excepciones_1.py`](nivel_0/excepciones_1.py): manejo de una excepción de tipo usando un bucle infinito y break (en vd con esto te escuecen un poco los ojos)
+        - [`excepciones_0.py`](nivel_0/excepciones_0.py): sintaxis básica del bloque try - except.  
+        - [`excepciones_1.py`](nivel_0/excepciones_1.py): manejo de una excepción de tipo usando un bucle infinito y break (en vd con esto te escuecen un poco los ojos).  
         - [`excepciones_2.py`](nivel_0/excepciones_2.py): uso se la instrucción raise para lanzar una excepción con un mensaje personalizado
