@@ -8,6 +8,8 @@
 
 #Se pueden concatenar varias excepciones en un mismo bloque try - except. La claúsula finally siempre se ejecuta, útil cuando existen conexiones con BD, fichero etc.
 
+#También es posible lanzar una excepción "general" sin especificar, es útil cuando un bloque puede dar diversas excepciones
+
 #Las excepciones se pueden consultar: https://docs.python.org/es/3/tutorial/errors.html
 
 def divide(num1, num2):

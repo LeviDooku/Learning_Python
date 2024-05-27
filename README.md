@@ -8,7 +8,8 @@ Me he propuesto aprender durante una hora al día varios lenguajes de programaci
 
 - Lunes 20 de Mayo: primer día aprendiendo python, he hecho tres programas muy sencillos para aprender la sintaxis básica, manejo de variables, condicionales y bucles y la estructura de datos set.
 - Martes 21 de Mayo: he añadido un nuevo programa que usa funciones para filtrar los números primos de una lista ingresada por el usuario.
-- Miércoles 22 de Mayo: viciada padre, completadas las primeras dos versiones del proyecto del nivel 0. Estoy orgulloso por un lado, pero por el otro no debería invertir tantas horas teniendo otras cosas que hacer.
+- Miércoles 22 de Mayo: viciada padre, completadas las primeras dos versiones del proyecto del nivel 0. Estoy orgulloso por un lado, pero por el otro no debería invertir tantas horas teniendo otras cosas que hacer.  
+- Lunes 27 de Mayo: empezando con el nivel 1, he empezado con excepciones, viendo como funciona el bloque try - except y la instrucción raise. Posteriormente veré la creación de errores propios mediante clases.
 
 ## Directorio de ficheros
 
@@ -32,3 +33,8 @@ Cada nivel se compone de forma arbitraria de programas de creciente dificultad c
             Se adjuntan unas imágenes de la GUI:  
 
             ![GUI](readme_resources/GUI_calculadora_V1.png)
+
+- [nivel_1](nivel_1): manejo de excepciones, lamda y map, trabajar con archivos etc.  
+        - [`excepciones_0.py`](nivel_0/excepciones_0.py): sintaxis básica del bloque try - except
+        - [`excepciones_1.py`](nivel_0/excepciones_1.py): manejo de una excepción de tipo usando un bucle infinito y break (en vd con esto te escuecen un poco los ojos)
+        - [`excepciones_2.py`](nivel_0/excepciones_2.py): uso se la instrucción raise para lanzar una excepción con un mensaje personalizado
